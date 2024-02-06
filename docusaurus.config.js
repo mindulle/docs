@@ -110,6 +110,9 @@ const config = {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
       },
+      algolia: {
+
+      }
     }),
 };
 
