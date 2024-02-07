@@ -110,7 +110,40 @@ const config = {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
       },
-      // algolia: { }
+      algolia: {
+        // The application ID provided by Algolia
+        appId: 'G3R31KA9CN',
+
+        // Public API key: it is safe to commit it
+        apiKey: 'b7ff7feb5260095d4099cb38d856f164',
+
+        indexName: 'mindulleio',
+
+        // Optional: see doc section below
+        contextualSearch: true,
+
+        // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
+        externalUrlRegex: 'external\\.com|domain\\.com',
+
+        // Optional: Replace parts of the item URLs from Algolia. Useful when using the same search index for multiple deployments using a different baseUrl. You can use regexp or string in the `from` param. For example: localhost:3000 vs myCompany.com/docs
+        replaceSearchResultPathname: {
+          from: '/docs/', // or as RegExp: /\/docs\//
+          to: '/',
+        },
+
+        // Optional: Algolia search parameters
+        searchParameters: {},
+
+        // Optional: path for search page that enabled by default (`false` to disable it)
+        searchPagePath: 'search',
+
+        //... other Algolia params
+        insights: true, // Optional, automatically send insights when user interacts with search results
+
+        container: '### REPLACE ME WITH A CONTAINER (e.g. div) ###',
+
+        debug: false // Set debug to true if you want to inspect the modal
+      }
     }),
 };
 
